@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Etch-A-Sketch</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik&family=Ubuntu&display=swap");
+    </style>
+  </head>
+  <body>
+    <h2 class="title">Project: Etch-A-Sketch</h2>
+    <main>
+      <div class="buttons">
+        <button class="reset">RESET</button>
+        <div class="slider-container">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            class="slider"
+            oninput="updateGridDisplay(this.value), updateGrid(this.value)"
+          />
+          <div class="grid-size"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="grid"></div>
+      </div>
+      <div class="color--selector">
+        <div class="colors">
+          <div class="color red" style="background-color: red"></div>
+          <div class="color blue" style="background-color: blue"></div>
+          <div class="color yellow" style="background-color: yellow"></div>
+          <div class="color purple" style="background-color: purple"></div>
+          <div class="color orange" style="background-color: orange"></div>
+          <div class="color green" style="background-color: green"></div>
+        </div>
+        <input type="color" class="rgba" oninput="rgbaValue(this.value)" />
+      </div>
+      <div class="overlay --hidden"></div>
+      <div class="modal --hidden">
+        <div class="modal--top">
+          <h2 class="modal--header">Are you sure?</h2>
+          <button class="close">X</button>
+        </div>
+        <div class="modal--input">
+          <button class="modal--yes">YES</button>
+          <button class="modal--no">NO</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./javascript.js"></script>
+</html>

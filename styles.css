@@ -1,0 +1,233 @@
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+.--hidden {
+  display: none;
+}
+
+.title {
+  font-size: 3vw;
+  margin-top: 2vw;
+  text-align: center;
+}
+main {
+  margin: 10vw 15vw;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 97.5%;
+  padding: 1vw;
+}
+
+.reset {
+  font-weight: bold;
+  background-color: #ffffff;
+  width: 7vw;
+  height: 2vw;
+  border-radius: 0.5vw;
+  border: solid 0.15vw #445077;
+  transition: all 0.1s;
+  font-size: 0.8vw;
+  margin: 1vw;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 0.5vw;
+  width: 10vw;
+  background-color: #445077;
+  border-radius: 0.4vw;
+  opacity: 0.7;
+  transition: 0.1s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: #7f7f7f;
+  cursor: pointer;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.grid-size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7f7f7f;
+  height: 1.7vw;
+  width: 6vw;
+  border-radius: 0.3vw;
+}
+
+.reset:hover {
+  color: #ffffff;
+  background-color: #253773;
+  cursor: pointer;
+  height: 2.2vw;
+  width: 7.2vw;
+  border: solid 0.2vw #253773;
+  box-shadow: 3px 3px 3px #445077;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 30vw;
+  width: 100%;
+  border: solid 0.2vw #1f326f;
+  border-radius: 0.5vw;
+}
+
+.grid {
+  border: solid #7f7f7f;
+  height: 28vw;
+  width: 28vw;
+  margin: 1vw;
+}
+
+.color--selector {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3vw;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.colors {
+  border-radius: 0.5vw;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  gap: 1vw;
+  padding: 0.75vw;
+}
+
+.color {
+  border: 0.25vw outset black;
+  border-radius: 0.5vw;
+  height: 4.5vw;
+  width: 4.5vw;
+  box-shadow: 4px 4px 4px;
+  transition: 0.1s;
+}
+
+.color:hover {
+  height: 4.7vw;
+  width: 4.7vw;
+}
+
+.color--selector input {
+  border: 0.25vw outset black;
+  border-radius: 0.5vw;
+  height: 5vw;
+  width: 5vw;
+  box-shadow: 4px 4px 4px;
+  margin: 0.75vw;
+}
+
+.color--selector input:hover {
+  height: 5.2vw;
+  width: 5.2vw;
+}
+
+.red {
+  background-color: red;
+}
+
+.modal {
+  border: solid 0.2vw #ffffff;
+  position: absolute;
+  left: 37.5%;
+  justify-self: center;
+  top: 63%;
+  background-color: #1f326f;
+  width: 25vw;
+  height: 7vw;
+  border-radius: 0.5vw;
+  z-index: 10;
+}
+
+.modal--top {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal--header {
+  position: absolute;
+  left: 35%;
+  top: -8%;
+  color: #ffffff;
+}
+
+.close {
+  position: absolute;
+  right: 2%;
+  top: 8%;
+  background-color: #1f326f;
+  border: none;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #ffffff;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.modal--yes,
+.modal--no {
+  position: absolute;
+  height: 2vw;
+  width: 7vw;
+  font-weight: bold;
+  border-radius: 0.5vw;
+  border: solid 0.15vw #ffffff;
+  transition: all 0.1s;
+  font-size: 0.8vw;
+  background-color: #1f326f;
+  color: #ffffff;
+  top: 61%;
+}
+
+.modal--no {
+  right: 20%;
+}
+
+.modal--yes {
+  left: 20%;
+}
+
+.modal--yes:hover,
+.modal--no:hover {
+  cursor: pointer;
+  height: 2.2vw;
+  width: 7.2vw;
+  background-color: #4e73e3;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
